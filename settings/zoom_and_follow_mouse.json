@@ -5,7 +5,7 @@
         "manual_offset": false,
         "max_speed": 160,
         "monitor": "",
-        "monitor_override": false,
+        "monitor_override": true,
         "monitor_override_id": 0,
         "monitor_scale": 1,
         "monitor_size_override": false,
@@ -82,7 +82,9 @@
         "source_h_raw": 0,
         "source_load": true,
         "source_name": "Screen Capture (XSHM)",
-        "source_refs": [],
+        "source_refs": [
+            "Screen Capture (XSHM)"
+        ],
         "source_type": "xshm_input",
         "source_w": 0,
         "source_w_override": 0,
@@ -109,21 +111,6 @@
         "zoom_y": 0,
         "zoom_y_target": 0
     },
-    "Height": 720,
-    "Manual Monitor Override": false,
-    "Width": 1280,
-    "debug": true,
-    "source": "Screen Capture (XSHM)||xshm_input",
-    "zoom_and_follow_mouse.follow.toggle": [
-        {
-            "control": true,
-            "key": "OBS_KEY_2"
-        }
-    ],
-    "zoom_and_follow_mouse.zoom.toggle": [
-        {
-            "control": true,
-            "key": "OBS_KEY_1"
-        }
-    ]
+    "Manual Monitor Override": true,
+    "source": "Screen Capture (XSHM)||xshm_input"
 }
