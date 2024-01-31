@@ -7,7 +7,7 @@
         "monitor": "",
         "monitor_override": true,
         "monitor_override_id": 0,
-        "monitor_scale": 1,
+        "monitor_scale": 1.0,
         "monitor_size_override": false,
         "monitors_dict": {
             "DVI-D-0": {
@@ -77,18 +77,18 @@
         ],
         "refresh_rate": 16,
         "smooth": 1.0,
-        "source_h": 0,
+        "source_h": 1080,
         "source_h_override": 0,
-        "source_h_raw": 0,
+        "source_h_raw": 1080,
         "source_load": true,
-        "source_name": "Screen Capture (XSHM)",
+        "source_name": "Screen Capture (PipeWire)",
         "source_refs": [
             "Screen Capture (XSHM)"
         ],
-        "source_type": "xshm_input",
-        "source_w": 0,
+        "source_type": "pipewire-desktop-capture-source",
+        "source_w": 1920,
         "source_w_override": 0,
-        "source_w_raw": 0,
+        "source_w_raw": 1920,
         "source_x": 0,
         "source_x_offset": 0,
         "source_x_raw": 0,
@@ -102,15 +102,30 @@
         "window_handle": "",
         "window_name": "",
         "zi_timer": 0,
-        "zo_timer": 0,
-        "zoom_h": 720,
+        "zo_timer": 18,
+        "zoom_h": 540,
+        "zoom_lock": false,
         "zoom_time": 300.0,
-        "zoom_w": 1280,
-        "zoom_x": 0,
-        "zoom_x_target": 0,
-        "zoom_y": 0,
-        "zoom_y_target": 0
+        "zoom_w": 960,
+        "zoom_x": 47.99999999999999,
+        "zoom_x_target": 48.0,
+        "zoom_y": 282.00000011298846,
+        "zoom_y_target": 282.0
     },
+    "Height": 540,
     "Manual Monitor Override": true,
-    "source": "Screen Capture (XSHM)||xshm_input"
+    "Width": 960,
+    "source": "Screen Capture (PipeWire)||pipewire-desktop-capture-source",
+    "zoom_and_follow_mouse.follow.toggle": [
+        {
+            "alt": true,
+            "key": "OBS_KEY_W"
+        }
+    ],
+    "zoom_and_follow_mouse.zoom.toggle": [
+        {
+            "alt": true,
+            "key": "OBS_KEY_Q"
+        }
+    ]
 }

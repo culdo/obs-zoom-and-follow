@@ -50,14 +50,20 @@ def get_cursor_position():
 
     return pmc.getMousePos()
 
+with open(path.join(cwd, "debug.log"), "w") as f:
+    f.write("")
+
 def log(*args):
     global debug
-    if debug:
+    if True:
         string = ''
         for arg in args:
             string += str(arg)
             if (len(args) > 1): string += " "
         print(string)
+        with open(path.join(cwd, "debug.log"), "a") as f:
+            f.write(string)
+            f.write("\n")
 
 # -------------------------------------------------------------------
 class ZoomSettings:
@@ -1231,20 +1237,23 @@ def script_save(settings):
 # -------------------------------------------------------------------
 def toggle_zoom(pressed):
     if pressed:
-        if new_source:
-            zoom.update_sources()
+        # if new_source:
+        #     try:
+        #         zoom.update_sources()
+        #     except Exception as error:
+        #         print(error)
         if zoom.source_name != "" and not zoom.lock:
-            for attr in ['source_w_raw', 'source_h_raw','source_x_raw','source_y_raw']:
-                try:
-                    getattr(zoom,attr)
-                except:
-                    log("reinit source params")
-                    log(zoom.__dict__)
-                    zoom.update_source_size()
-                    log(zoom.__dict__)
-                    break
-            if zoom.source_type not in SOURCES.monitor.all_sources():
-                zoom.update_source_size()
+            # for attr in ['source_w_raw', 'source_h_raw','source_x_raw','source_y_raw']:
+            #     try:
+            #         getattr(zoom,attr)
+            #     except:
+            #         log("reinit source params")
+            #         log(zoom.__dict__)
+            #         zoom.update_source_size()
+            #         log(zoom.__dict__)
+            #         break
+            # if zoom.source_type not in SOURCES.monitor.all_sources():
+                # zoom.update_source_size()
             zoom.center_on_cursor()
             zoom.lock = True
             zoom.tick_enable()
